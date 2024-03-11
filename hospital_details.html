@@ -41,7 +41,7 @@
 		
 		else if (window.web3) {
 			
-			window.web3 = new Web3(new Web3.providers.HttpProvider("https://sepolia.infura.io/v3/eebdd30b331e4c7ba9bc145f143f9fa7")); 
+			window.web3 = new Web3(new Web3.providers.HttpProvider("https://sepolia.infura.io/v3/cc497ce44e7d4f2aa84894194cb90f12")); 
 			}
 		
 		else {
@@ -114,10 +114,10 @@
 		"type": "function"
 	}
 ]
-        var contractaddress = '0x237175907AF3E1e874331d34EB37c504652Dc705';
+        var contractaddress = '0x83e63bc5788C7C7eb52fad26BBB488E17b2B3851';
         
         function add_details() {
-            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '500000', gas: '50000'});
+            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '5000000'});
 			var ds1 = document.getElementById("addr").value;
 			var ds2 = document.getElementById("spec").value;
             var tname = document.getElementById("name1").value;
@@ -130,7 +130,7 @@
                 });
         }
 		function show_details() {
-            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '500000'});
+            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '70000000', gas: '7000000'});
             var idd = document.getElementById("tid").value;
              var result = myContract.methods.retreive_hospital_details(idd).call(function (err, result) {
                
@@ -144,7 +144,7 @@
                 });
         }
         function del_details() {
-            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '5000000', gas: '500000'});
+            var myContract = new web3.eth.Contract(abi,contractaddress, {from: account, gasPrice: '70000000', gas: '7000000'});
             var bid = document.getElementById("bid1").value;
              var result = myContract.methods.burnMyToken(bid).send(function (err, result) {
                
